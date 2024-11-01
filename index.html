@@ -9,19 +9,32 @@
             background-color: white;
             color: black;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start; /* Align text to the left */
+            align-items: flex-start; /* Align text to the top */
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            text-align: center;
+            padding: 20px; /* Add some padding */
+        }
+        .cursor {
+            display: inline-block;
+            width: 10px; /* Width of the cursor */
+            height: 20px; /* Height of the cursor */
+            background-color: black; /* Cursor color */
+            animation: blink 1s step-end infinite; /* Blinking effect */
+            margin-left: 5px; /* Space between text and cursor */
+        }
+        @keyframes blink {
+            50% {
+                opacity: 0; /* Blink effect */
+            }
         }
     </style>
 </head>
 <body>
     <div id="note">
-        <h1>Your Text Here</h1>
-        <p>This is where your pre-set text goes.</p>
+        <p>Your text here</p>
+        <div class="cursor"></div> <!-- Flashing cursor -->
     </div>
 </body>
 </html>

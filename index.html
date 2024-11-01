@@ -18,11 +18,11 @@
         }
         .cursor {
             display: inline-block;
-            width: 10px; /* Width of the cursor */
+            width: 2px; /* Width of the cursor (thinner) */
             height: 20px; /* Height of the cursor */
             background-color: black; /* Cursor color */
             animation: blink 1s step-end infinite; /* Blinking effect */
-            margin-left: 5px; /* Space between text and cursor */
+            margin-left: 2px; /* Space between text and cursor */
         }
         @keyframes blink {
             50% {
@@ -33,8 +33,7 @@
 </head>
 <body>
     <div id="note">
-        <p>Test one...</p>
-        <div class="cursor"></div> <!-- Flashing cursor -->
+        <ptest1...<span class="cursor"></span></p> <!-- Flashing cursor right next to text -->
     </div>
 </body>
 </html>

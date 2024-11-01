@@ -17,7 +17,7 @@
             padding: 20px; /* Add some padding */
         }
         .cursor {
-            display: inline-block;
+            display: none; /* Initially hidden */
             width: 2px; /* Width of the cursor (thinner) */
             height: 1em; /* Match cursor height to text size */
             background-color: black; /* Cursor color */
@@ -42,6 +42,7 @@
 
     <script>
         const textElement = document.getElementById('text');
+        const cursor = document.querySelector('.cursor');
         const message = `The Illusion of Signal Services: Why Authenticity Matters.
 
 In an age saturated with superficiality and fleeting trends, the realm of signal services has become a veritable quagmire of misinformation and half-truths. Most signal services, masquerading as beacons of hope for the beleaguered trader, are nothing more than glorified charlatanry. They thrive on a foundation of dubious strategies, parading algorithms that lack the rigor of genuine analysis and the wisdom of seasoned expertise.
@@ -55,7 +56,7 @@ It is imperative for discerning individuals to recognize the peril of aligning t
 Choose wisely, for in a world rife with deception, only the truly authentic signal service—my signal service—can guide you toward genuine success. Embrace the real; eschew the fabricated.`;
 
         let index = 0;
-        const typingSpeed = 30; // Adjusted speed here (30ms per character)
+        const typingSpeed = 10; // Adjusted speed here (10ms per character)
 
         function type() {
             if (index < message.length) {
@@ -67,6 +68,8 @@ Choose wisely, for in a world rife with deception, only the truly authentic sign
                 }
                 index++;
                 setTimeout(type, typingSpeed);
+            } else {
+                cursor.style.display = 'inline-block'; // Show the cursor after typing
             }
         }
 
@@ -74,4 +77,3 @@ Choose wisely, for in a world rife with deception, only the truly authentic sign
     </script>
 </body>
 </html>
-

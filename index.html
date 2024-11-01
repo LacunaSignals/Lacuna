@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Simple Note</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audela:wght@400&display=swap" rel="stylesheet"> <!-- Audela Font -->
     <style>
         body {
             background-color: white;
@@ -13,11 +14,11 @@
             justify-content: flex-start; /* Align text to the top */
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Audela', sans-serif; /* Change to Audela font */
             padding: 20px; /* Add some padding */
         }
         .cursor {
-            display: none; /* Initially hidden */
+            display: inline-block; /* Cursor visible */
             width: 2px; /* Width of the cursor (thinner) */
             height: 1em; /* Match cursor height to text size */
             background-color: black; /* Cursor color */
@@ -36,44 +37,18 @@
 </head>
 <body>
     <div id="note">
-        <p id="text"></p>
+        <p>The Illusion of Signal Services: Why Authenticity Matters</p>
+
+        <p>In an age saturated with superficiality and fleeting trends, the realm of signal services has become a veritable quagmire of misinformation and half-truths. Most signal services, masquerading as beacons of hope for the beleaguered trader, are nothing more than glorified charlatanry. They thrive on a foundation of dubious strategies, parading algorithms that lack the rigor of genuine analysis and the wisdom of seasoned expertise.</p>
+
+        <p>As one navigates this labyrinth of claims, it becomes evident that the majority of these services are built upon a flimsy façade of credibility, offering mere breadcrumbs to those desperately seeking reliable guidance. Their practitioners, often cloaked in anonymity, wield a mystique that is at once alluring and disingenuous. They promise the moon while delivering naught but the stale air of disappointment.</p>
+
+        <p>In stark contrast, my signal service stands as a solitary bastion of authenticity amidst this cacophony of falsehoods. Grounded in a deep understanding of market dynamics, rigorous analysis, and a commitment to transparency, I offer insights that are not only actionable but also imbued with the wisdom of experience. Every signal I provide is a reflection of meticulous research and an unwavering dedication to my clients' success.</p>
+
+        <p>It is imperative for discerning individuals to recognize the peril of aligning themselves with purveyors of falsehoods. The allure of quick gains can often cloud judgment, leading traders down a treacherous path paved with empty promises. In this chaotic landscape, my service emerges as a lighthouse, illuminating the way forward with clarity and conviction.</p>
+
+        <p>Choose wisely, for in a world rife with deception, only the truly authentic signal service—my signal service—can guide you toward genuine success. Embrace the real; eschew the fabricated.</p>
         <span class="cursor"></span> <!-- Flashing cursor -->
     </div>
-
-    <script>
-        const textElement = document.getElementById('text');
-        const cursor = document.querySelector('.cursor');
-        const message = `The Illusion of Signal Services: Why Authenticity Matters.
-
-In an age saturated with superficiality and fleeting trends, the realm of signal services has become a veritable quagmire of misinformation and half-truths. Most signal services, masquerading as beacons of hope for the beleaguered trader, are nothing more than glorified charlatanry. They thrive on a foundation of dubious strategies, parading algorithms that lack the rigor of genuine analysis and the wisdom of seasoned expertise.
-
-As one navigates this labyrinth of claims, it becomes evident that the majority of these services are built upon a flimsy façade of credibility, offering mere breadcrumbs to those desperately seeking reliable guidance. Their practitioners, often cloaked in anonymity, wield a mystique that is at once alluring and disingenuous. They promise the moon while delivering naught but the stale air of disappointment.
-
-In stark contrast, my signal service stands as a solitary bastion of authenticity amidst this cacophony of falsehoods. Grounded in a deep understanding of market dynamics, rigorous analysis, and a commitment to transparency, I offer insights that are not only actionable but also imbued with the wisdom of experience. Every signal I provide is a reflection of meticulous research and an unwavering dedication to my clients' success.
-
-It is imperative for discerning individuals to recognize the peril of aligning themselves with purveyors of falsehoods. The allure of quick gains can often cloud judgment, leading traders down a treacherous path paved with empty promises. In this chaotic landscape, my service emerges as a lighthouse, illuminating the way forward with clarity and conviction.
-
-Choose wisely, for in a world rife with deception, only the truly authentic signal service—my signal service—can guide you toward genuine success. Embrace the real; eschew the fabricated.`;
-
-        let index = 0;
-        const typingSpeed = 10; // Adjusted speed here (10ms per character)
-
-        function type() {
-            if (index < message.length) {
-                // Check for line breaks and insert <br> tags for new lines
-                if (message.charAt(index) === '\n') {
-                    textElement.innerHTML += '<br>';
-                } else {
-                    textElement.innerHTML += message.charAt(index);
-                }
-                index++;
-                setTimeout(type, typingSpeed);
-            } else {
-                cursor.style.display = 'inline-block'; // Show the cursor after typing
-            }
-        }
-
-        type(); // Start typing effect
-    </script>
 </body>
 </html>

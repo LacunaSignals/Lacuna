@@ -33,7 +33,15 @@
 </head>
 <body>
     <div id="note">
-        <p>In an age saturated with superficiality and fleeting trends, the realm of signal services has become a veritable quagmire of misinformation and half-truths. Most signal services, masquerading as beacons of hope for the beleaguered trader, are nothing more than glorified charlatanry. They thrive on a foundation of dubious strategies, parading algorithms that lack the rigor of genuine analysis and the wisdom of seasoned expertise.
+        <p id="text"></p>
+        <span class="cursor"></span> <!-- Flashing cursor -->
+    </div>
+
+    <script>
+        const textElement = document.getElementById('text');
+        const message = `The Illusion of Signal Services: Why Authenticity Matters.
+        
+In an age saturated with superficiality and fleeting trends, the realm of signal services has become a veritable quagmire of misinformation and half-truths. Most signal services, masquerading as beacons of hope for the beleaguered trader, are nothing more than glorified charlatanry. They thrive on a foundation of dubious strategies, parading algorithms that lack the rigor of genuine analysis and the wisdom of seasoned expertise.
 
 As one navigates this labyrinth of claims, it becomes evident that the majority of these services are built upon a flimsy façade of credibility, offering mere breadcrumbs to those desperately seeking reliable guidance. Their practitioners, often cloaked in anonymity, wield a mystique that is at once alluring and disingenuous. They promise the moon while delivering naught but the stale air of disappointment.
 
@@ -41,7 +49,19 @@ In stark contrast, my signal service stands as a solitary bastion of authenticit
 
 It is imperative for discerning individuals to recognize the peril of aligning themselves with purveyors of falsehoods. The allure of quick gains can often cloud judgment, leading traders down a treacherous path paved with empty promises. In this chaotic landscape, my service emerges as a lighthouse, illuminating the way forward with clarity and conviction.
 
-Choose wisely, for in a world rife with deception, only the truly authentic signal service—my signal service—can guide you toward genuine success. Embrace the real; eschew the fabricated.<span class="cursor"></span></p> <!-- Replace with your text -->
-    </div>
+Choose wisely, for in a world rife with deception, only the truly authentic signal service—my signal service—can guide you toward genuine success. Embrace the real; eschew the fabricated.`;
+
+        let index = 0;
+
+        function type() {
+            if (index < message.length) {
+                textElement.innerHTML += message.charAt(index);
+                index++;
+                setTimeout(type, 50); // Adjust speed here (50ms per character)
+            }
+        }
+
+        type(); // Start typing effect
+    </script>
 </body>
 </html>
